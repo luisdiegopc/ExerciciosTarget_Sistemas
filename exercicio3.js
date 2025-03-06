@@ -3,7 +3,7 @@
 • O maior valor de faturamento ocorrido em um dia do mês;
 • Número de dias no mês em que o valor de faturamento diário foi superior à média mensal. */ 
 
-// Exemplo de JSON de faturamento
+// JSON faturamento
 const faturamentoMensal = [
     { "dia": 1, "faturamento": 200.0 },
     { "dia": 2, "faturamento": 300.5 },
@@ -15,18 +15,18 @@ const faturamentoMensal = [
 ];
 
 function analisarFaturamento(dados) {
-    // Filtrar dias com faturamento maior que 0
+    //  Dias com faturamento maior que 0
     const diasComFaturamento = dados.filter(dia => dia.faturamento > 0);
     
-    // Obter o menor e maior faturamento
+    // Menor e maior faturamento
     const menorFaturamento = Math.min(...diasComFaturamento.map(dia => dia.faturamento));
     const maiorFaturamento = Math.max(...diasComFaturamento.map(dia => dia.faturamento));
     
-    // Calcular a média de faturamento
+    // Calc   média de faturamento
     const somaFaturamento = diasComFaturamento.reduce((acc, dia) => acc + dia.faturamento, 0);
     const mediaFaturamento = somaFaturamento / diasComFaturamento.length;
     
-    // Contar os dias com faturamento acima da média
+    // Dias com faturamento acima da média
     const diasAcimaDaMedia = diasComFaturamento.filter(dia => dia.faturamento > mediaFaturamento).length;
     
     return {
@@ -36,7 +36,7 @@ function analisarFaturamento(dados) {
     };
 }
 
-// Aanálise
+// Aanálise. 
 const resultado = analisarFaturamento(faturamentoMensal);
 
 console.log("Menor faturamento:", resultado.menorFaturamento);
