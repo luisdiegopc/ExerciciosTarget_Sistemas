@@ -5,14 +5,14 @@ b) Evite usar funções prontas, como, por exemplo, reverse;
 */ 
 
 function inverterString(str) {
-    let invertida = ""; // String vazia para armazenar o resultado
+    let invertida = ""; // String vazia 
 
     // String de trás para frente
     for (let i = str.length - 1; i >= 0; i--) {
         invertida += str[i]; // Add caractere ao resultado
     }
 
-    return invertida; // Retorna a string invertida
+    return invertida; // String invertida
 }
 
 const stringOriginal = "Texto de testes do exercício número 5!";

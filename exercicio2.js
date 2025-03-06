@@ -20,5 +20,5 @@ function analiseFibonacci(numero) {
 }
 
 // Conferindo a função
-const numero = 21; // Informe o número aqui
+const numero = 21; // Informe o número   
 console.log(analiseFibonacci(numero));
